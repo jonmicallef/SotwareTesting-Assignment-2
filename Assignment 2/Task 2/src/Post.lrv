@@ -1,0 +1,27 @@
+%%Making sure there are not more than 3 bad logins in 5 seconds.
+
+GLOBAL {
+	Variables{
+		int AlertCount = 0;
+	}
+	Events{
+		postAPI() = {*.postAPI()}
+		postResult(boolean postResultt)= {*.postResult(postResultt)}
+	}
+	PROPERTY post{
+		STATES {
+			BAD {				
+				BadPOST
+				MoreThan5
+			}
+			STARTING {
+				POST
+			}
+		}
+		TRANSITIONS{
+			POST -> POST [postAPI\postResultt == true \AlertCount++; System.out.println("Good post observed. this many alerts:"+AlertCount);]
+			POST -> MoreThan5 [postAPI\AlertCount == 6\ System.out.println("there are 5 alerts, api will delete oldest one");]
+			POST -> BadPOST [postAPI\postResultt == false\ System.out.println("bad UserId");]
+		}
+	}
+}

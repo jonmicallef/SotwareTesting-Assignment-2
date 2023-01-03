@@ -1,0 +1,25 @@
+%%Making sure that they are deleted
+
+GLOBAL {
+	Events{
+		DeleteRequest() = {*.DeleteRequest()}
+		noAlerts() = {*.noAlerts()}
+		AmountOfAlert(boolean Alert) = {*.AmountOfAlert(Alert)}
+	}
+		
+	PROPERTY IslistEmpty{
+		STATES {
+			BAD {				
+				AlertInList
+			}
+			STARTING {
+				EmptyList
+			}
+		}
+		TRANSITIONS{
+			EmptyList -> AlertInList [noAlerts\Alert == true\ System.out.println("List has alert");]
+			EmptyList -> EmptyList [DeleteRequest\Alert == false\ System.out.println("list is empty");]
+		}
+	}
+		
+}

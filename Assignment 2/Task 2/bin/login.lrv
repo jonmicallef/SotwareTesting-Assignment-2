@@ -1,0 +1,24 @@
+%%Making sure that the login is correct
+
+GLOBAL {
+	Events{
+		login() = {*.login()}
+		Correct() = {*.Correct()}
+		Incorrect() = {*.Incorrect()}
+		loginResult(boolean loginResultt) = {*.loginResult(loginResultt)}
+	}
+	PROPERTY logins{
+		STATES {
+			BAD {				
+				badLogin
+			}
+			STARTING {
+				goodLogin
+			}
+		}
+		TRANSITIONS{
+			goodLogin -> badLogin [Incorrect\loginResultt == true\System.out.println("Bad login observed.");]
+			goodLogin -> goodLogin [Correct\loginResultt == false\ System.out.println("Good login observed.");]
+		}
+	}
+}

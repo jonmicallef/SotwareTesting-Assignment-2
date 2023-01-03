@@ -1,0 +1,4 @@
+[IslistEmpty]AUTOMATON::> IslistEmpty() STATE::>EmptyList
+list is empty
+[IslistEmpty]MOVED ON METHODCALL: int main.assignment.DeleteRequest() TO STATE::> EmptyList
+[IslistEmpty]AUTOMATON::> IslistEmpty() STATE::>EmptyList

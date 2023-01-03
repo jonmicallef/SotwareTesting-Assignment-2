@@ -1,0 +1,9 @@
+digraph _logic_logins {
+rankdir=LR;
+node [shape = circle]; goodLogin;
+node [shape = octagon]; badLogin;
+node [shape = point]; _s_s;
+_s_s -> goodLogin;
+goodLogin -> badLogin [ label = "(1) Incorrect\\loginResultt == true \\System . out . println ( \" Bad login observed. \" ) ; "];
+goodLogin -> goodLogin [ label = "(2) Correct\\loginResultt == false \\System . out . println ( \" Good login observed. \" ) ; "];
+}

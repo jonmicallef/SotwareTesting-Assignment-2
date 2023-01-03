@@ -1,0 +1,9 @@
+digraph _logic_listIsEmpty {
+rankdir=LR;
+node [shape = circle]; EmptyList;
+node [shape = octagon]; AlertInList;
+node [shape = point]; _s_s;
+_s_s -> EmptyList;
+EmptyList -> EmptyList [ label = "(1) DeleteRequest\\Alert == true \\System . out . println ( \" Alert is in list \" ) ; "];
+AlertInList -> AlertInList [ label = "(1) DeleteRequest\\Alert == false \\System . out . println ( \" List is empty observed \" ) ; "];
+}

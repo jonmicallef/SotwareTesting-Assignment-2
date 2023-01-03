@@ -1,0 +1,9 @@
+[post]AUTOMATON::> post() STATE::>POST
+bad UserId
+[post]MOVED ON METHODCALL: boolean main.assignment.postAPI() TO STATE::> !!!SYSTEM REACHED BAD STATE!!! BadPOST 
+aspects._asp_Post0.ajc$before$aspects__asp_Post0$3$375f5e1f(_asp_Post0.aj:31)
+main.assignment.main(Runner.java:24) 
+[post]AUTOMATON::> post() STATE::>BadPOST
+[post]AUTOMATON::> post() STATE::>BadPOST
+[post]AUTOMATON::> post() STATE::>BadPOST
+[post]AUTOMATON::> post() STATE::>BadPOST

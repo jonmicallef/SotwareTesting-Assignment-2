@@ -1,0 +1,6 @@
+[logins]AUTOMATON::> logins() STATE::>goodLogin
+[logins]AUTOMATON::> logins() STATE::>goodLogin
+[logins]AUTOMATON::> logins() STATE::>goodLogin
+[logins]AUTOMATON::> logins() STATE::>goodLogin
+Good login observed.
+[logins]MOVED ON METHODCALL: void main.assignment.Correct() TO STATE::> goodLogin

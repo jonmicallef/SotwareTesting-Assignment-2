@@ -1,0 +1,10 @@
+digraph _logic_post {
+rankdir=LR;
+node [shape = circle]; POST;
+node [shape = octagon]; BadPOST MoreThan5;
+node [shape = point]; _s_s;
+_s_s -> POST;
+POST -> POST [ label = "(1) postAPI\\postResultt == true \\AlertCount ++ ; System . out . println ( \" Good post observed. this many alerts: \" + AlertCount ) ; "];
+POST -> MoreThan5 [ label = "(2) postAPI\\AlertCount == 6 \\System . out . println ( \" there are 5 alerts, api will delete oldest one \" ) ; "];
+POST -> BadPOST [ label = "(3) postAPI\\postResultt == false \\System . out . println ( \" bad UserId \" ) ; "];
+}
